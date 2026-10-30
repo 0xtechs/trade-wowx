@@ -21,7 +21,8 @@ export const OrderlyProvider = () => {
   const isWowx =
     window.location.href.includes("wowx.market") ||
     window.location.href.includes("localhost") ||
-    window.location.href.includes("127.0.0.1");
+    window.location.href.includes("127.0.0.1") ||
+    window.location.href.includes("trade-wowx-tawny.vercel.app");
 
   useEffect(() => {
     if (isWowx) {
@@ -57,17 +58,20 @@ export const OrderlyProvider = () => {
           brokerName="WOWX"
           // Force Mainnet exclusively
           networkId="mainnet"
-          // Hide testnet option in the dropdown selector completely
-          networkDropdown={{
-            hideTestnet: true,
-          }}
           theme={{
             primaryColor: "#E2FE30",
             mode: "dark",
           }}
           appIcons={{
             main: {
-              img: WOWX_THEME.logoUrl,
+              component: (
+                <img
+                  className="orderly-app-logo"
+                  alt="WowX"
+                  src={WOWX_THEME.logoUrl}
+                  style={{ height: "42px", width: "auto", objectFit: "contain" }}
+                />
+              ),
             },
           }}
           onRouteChange={onRouteChange}
