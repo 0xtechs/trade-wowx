@@ -58,10 +58,8 @@ export const OrderlyProvider = () => {
           brokerName="WOWX"
           // Force Mainnet exclusively
           networkId="mainnet"
-		  // Configure supported wallet chains (e.g., BSC and Ethereum)
-		  // and set BSC as the default initial chain/wallet adapter context if supported by your SDK version
-		  chains={["bsc", "ethereum"]} 
-		  defaultChain="bsc"
+		  // Set BNB Chain (bsc) as the initial default network
+		  initialChainId={56} // 56 is the official Chain ID for BSC Mainnet
           theme={{
             primaryColor: "#E2FE30",
             mode: "dark",
