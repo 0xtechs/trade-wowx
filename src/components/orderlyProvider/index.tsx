@@ -52,14 +52,15 @@ export const OrderlyProvider = () => {
 
   return (
     <OrderlyLocaleProvider>
-      <WalletConnectorProvider>
+      <WalletConnectorProvider
+        network="mainnet"
+      >
         <OrderlyAppProvider
           brokerId="wowx"
           brokerName="WOWX"
-          // Force Mainnet exclusively
           networkId="mainnet"
-		  // Set BNB Chain (bsc) as the initial default network
-		  initialChainId={56} // 56 is the official Chain ID for BSC Mainnet
+          initialChainId={56}
+          config={config}
           theme={{
             primaryColor: "#E2FE30",
             mode: "dark",

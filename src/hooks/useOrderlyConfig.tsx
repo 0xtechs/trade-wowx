@@ -26,7 +26,7 @@ export type OrderlyConfig = {
   };
   scaffold: {
     mainNavProps: MainNavWidgetProps;
-    footerProps: FooterProps;
+    footerProps?: FooterProps;
     bottomNavProps: BottomNavProps;
   };
   tradingPage: {
@@ -49,12 +49,6 @@ const APP_ICONS: AppLogos = {
   secondary: {
     img: WOWX_THEME.faviconUrl,
   },
-};
-
-const FOOTER_PROPS: FooterProps = {
-  telegramUrl: "https://orderly.network",
-  discordUrl: "https://discord.com/invite/orderlynetwork",
-  twitterUrl: "https://twitter.com/OrderlyNetwork",
 };
 
 const TRADING_VIEW_CONFIG: TradingPageProps["tradingViewConfig"] = {
@@ -150,10 +144,8 @@ export const useOrderlyConfig = () => {
                 isSecondary: true,
               },
             ],
-            ...FOOTER_PROPS,
           },
         },
-        footerProps: FOOTER_PROPS,
         bottomNavProps: {
           mainMenus: [
             {
