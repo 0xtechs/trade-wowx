@@ -1,0 +1,80 @@
+:root, [data-theme="wowx"], .dark {
+  --oui-font-family: 'Manrope', sans-serif;
+
+  /* WowX Production Primary Neon Yellow (#E2FE30 -> RGB: 226 254 48) */
+  --oui-color-primary: 226 254 48;
+  --oui-color-primary-light: 235 255 102;
+  --oui-color-primary-darken: 198 224 20;
+  --oui-color-primary-contrast: 0 0 0;
+
+  --oui-color-link: 226 254 48;
+  --oui-color-link-light: 235 255 102;
+
+  --oui-color-secondary: 255 255 255;
+  --oui-color-tertiary: 218 218 218;
+  --oui-color-quaternary: 138 145 158;
+
+  --oui-color-danger: 246 70 93;
+  --oui-color-danger-light: 250 128 144;
+  --oui-color-danger-darken: 212 45 68;
+  --oui-color-danger-contrast: 255 255 255;
+
+  --oui-color-success: 0 192 135;
+  --oui-color-success-light: 51 214 163;
+  --oui-color-success-darken: 0 143 99;
+  --oui-color-success-contrast: 255 255 255;
+
+  --oui-color-warning: 255 209 70;
+  --oui-color-warning-light: 255 229 133;
+  --oui-color-warning-darken: 255 152 0;
+  --oui-color-warning-contrast: 255 255 255;
+
+  /* Surfaces & Component Backgrounds */
+  --oui-color-fill: 18 20 26;
+  --oui-color-fill-active: 28 30 36;
+
+  /* Exact Dark Base Layers (#0A0B0D up to card surfaces) */
+  --oui-color-base-1: 38 41 48;
+  --oui-color-base-2: 30 33 40;
+  --oui-color-base-3: 24 26 33;
+  --oui-color-base-4: 20 22 28;
+  --oui-color-base-5: 18 20 26;
+  --oui-color-base-6: 15 17 22;
+  --oui-color-base-7: 12 14 18;
+  --oui-color-base-8: 10 11 13;
+  --oui-color-base-9: 8 9 11;
+  --oui-color-base-10: 5 6 7;
+
+  --oui-color-base-foreground: 255 255 255;
+  --oui-color-line: 28 30 36;
+
+  --oui-color-trading-loss: 246 70 93;
+  --oui-color-trading-loss-contrast: 255 255 255;
+  --oui-color-trading-profit: 0 192 135;
+  --oui-color-trading-profit-contrast: 255 255 255;
+
+  /* Gradients */
+  --oui-gradient-primary-start: 226 254 48;
+  --oui-gradient-primary-end: 198 224 20;
+
+  --oui-gradient-secondary-start: 18 20 26;
+  --oui-gradient-secondary-end: 28 30 36;
+
+  --oui-gradient-success-start: 0 143 99;
+  --oui-gradient-success-end: 0 192 135;
+
+  --oui-gradient-danger-start: 212 45 68;
+  --oui-gradient-danger-end: 246 70 93;
+
+  --oui-gradient-brand-start: 226 254 48;
+  --oui-gradient-brand-end: 198 224 20;
+
+  /* Rounded Radii */
+  --oui-rounded-sm: 2px;
+  --oui-rounded: 4px;
+  --oui-rounded-md: 6px;
+  --oui-rounded-lg: 8px;
+  --oui-rounded-xl: 12px;
+  --oui-rounded-2xl: 16px;
+  --oui-rounded-full: 9999px;
+}

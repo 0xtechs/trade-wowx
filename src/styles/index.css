@@ -1,0 +1,104 @@
+@import "@orderly.network/ui/dist/styles.css";
+@import "./theme.css";
+@import "./fonts.css";
+
+/* ==========================================================================
+   GLOBAL APP BACKGROUND & BASE RESETS
+   ========================================================================== */
+html, body, #root, .orderly-app, .orderly-theme {
+  background-color: #0A0B0D !important;
+  color: #FFFFFF !important;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root, .dark, [data-theme="wowx"] {
+  --brand-primary: #E2FE30;
+  --brand-bg: #0A0B0D;
+
+  --oui-color-primary: #E2FE30 !important;
+  --oui-color-primary-hover: #d2ec20 !important;
+  --oui-color-primary-contrast: #000000 !important;
+
+  --oui-color-base-100: #0A0B0D !important;
+  --oui-color-base-200: #12141A !important;
+  --oui-color-base-300: #1C1E24 !important;
+  --oui-color-subtle: #8A919E !important;
+
+  --orderly-background: #0A0B0D !important;
+  --orderly-bg-base: #0A0B0D !important;
+  --orderly-bg-neutral: #14161B !important;
+  --orderly-primary: #E2FE30 !important;
+  --orderly-primary-hover: #d2ec20 !important;
+}
+
+/* ==========================================================================
+   NAVBAR & LOGO STYLING
+   ========================================================================== */
+div[class*="orderly-navbar"], header {
+  background-color: #0A0B0D !important;
+  border-bottom: 1px solid #1C1E24 !important;
+}
+
+.orderly-navbar img, header img, img.orderly-app-logo {
+  height: 42px !important;
+  width: auto !important;
+  max-width: 160px !important;
+  object-fit: contain !important;
+}
+
+/* ==========================================================================
+   PRODUCTION PARITY COMPONENT OVERRIDES (MATCHING WOWX BUNDLES)
+   ========================================================================== */
+
+/* 1. Primary Buttons & Connect Wallet (Solid Black text on Neon Yellow background) */
+button.oui-button-primary,
+button[class*="oui-button-primary"],
+button.oui-bg-primary-darken,
+button[class*="oui-bg-primary"],
+.orderly-button-primary,
+button[id*="connect-wallet-btn"] {
+  background-color: #E2FE30 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure child elements, spans, and states inherit solid black text */
+button.oui-button-primary *,
+button[class*="oui-button-primary"] *,
+button.oui-bg-primary-darken *,
+button[class*="oui-bg-primary"] *,
+.orderly-button-primary *,
+button[id*="connect-wallet-btn"] *,
+.oui-text-primary-contrast {
+  color: #000000 !important;
+}
+
+/* Hover & Active states */
+button.oui-button-primary:hover,
+button[class*="oui-button-primary"]:hover,
+button.oui-bg-primary-darken:hover,
+button[class*="oui-bg-primary"]:hover,
+.orderly-button-primary:hover {
+  background-color: #d2ec20 !important;
+  color: #000000 !important;
+}
+
+/* 2. Container Cards & Surface Boxes (#12141A) */
+.oui-box,
+div[class*="oui-box"],
+div[class*="oui-card"],
+div[class*="oui-panel"],
+div[class*="orderly-card"] {
+  background-color: #12141A !important;
+  border-color: #1C1E24 !important;
+}
+
+/* 3. Primary Text Accents (#E2FE30) */
+.oui-text-primary,
+span[class*="oui-text-primary"],
+div[class*="oui-text-primary"],
+.oui-font-bold.oui-text-primary {
+  color: #E2FE30 !important;
+}

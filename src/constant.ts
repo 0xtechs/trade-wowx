@@ -1,0 +1,44 @@
+export enum PathEnum {
+  Root = "/",
+  Perp = "/perp",
+  Prediction = "/prediction",
+
+  Portfolio = "/portfolio",
+  Positions = "/portfolio/positions",
+  Orders = "/portfolio/orders",
+  Assets = "/portfolio/assets",
+  FeeTier = "/portfolio/fee",
+  ApiKey = "/portfolio/api-key",
+  Setting = "/portfolio/setting",
+  History = "/portfolio/history",
+
+  Markets = "/markets",
+  Leaderboard = "/leaderboard",
+
+  Rewards = "/rewards",
+  RewardsTrading = "/rewards/trading",
+  RewardsAffiliate = "/rewards/affiliate",
+}
+
+export const PageTitleMap = {
+  [PathEnum.Prediction]: "Prediction",
+  [PathEnum.Portfolio]: "Portfolio",
+  [PathEnum.FeeTier]: "Fee tier",
+  [PathEnum.ApiKey]: "API keys",
+  [PathEnum.Orders]: "Orders",
+  [PathEnum.Assets]: "Assets",
+  [PathEnum.Positions]: "Positions",
+  [PathEnum.Setting]: "Settings",
+  [PathEnum.History]: "History",
+  [PathEnum.Markets]: "Markets",
+  [PathEnum.Leaderboard]: "Leaderboard",
+  [PathEnum.RewardsTrading]: "Trading Rewards",
+  [PathEnum.RewardsAffiliate]: "Affiliate program",
+};
+
+export const WOWX_THEME = {
+  logoUrl: "/wowx-logo.png",
+  faviconUrl: "/wowx-favicon.png",
+  primaryColor: "#E2FE30", // Replace with wowx branding color hex
+  bgBackgroundColor: "#0A0B0D",
+};
