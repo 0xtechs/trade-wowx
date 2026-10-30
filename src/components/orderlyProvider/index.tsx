@@ -51,33 +51,38 @@ export const OrderlyProvider = () => {
   }, [location.pathname, isWowx]);
 
   return (
-    <OrderlyAppProvider
-	  brokerId="wowx"
-	  brokerName="WOWX"
-	  networkId="mainnet"
-	  // Configure supported wallet chains (e.g., BSC and Ethereum)
-	  // and set BSC as the default initial chain/wallet adapter context if supported by your SDK version
-	  chains={["bsc", "ethereum"]} 
-	  defaultChain="bsc"
-	  theme={{
-		primaryColor: "#E2FE30",
-		mode: "dark",
-	  }}
-	  appIcons={{
-		main: {
-		  component: (
-			<img
-			  className="orderly-app-logo"
-			  alt="WowX"
-			  src={WOWX_THEME.logoUrl}
-			  style={{ height: "42px", width: "auto", objectFit: "contain" }}
-			/>
-		  ),
-		},
-	  }}
-	  onRouteChange={onRouteChange}
-	>
-	  <Outlet />
-	</OrderlyAppProvider>
+    <OrderlyLocaleProvider>
+      <WalletConnectorProvider>
+        <OrderlyAppProvider
+          brokerId="wowx"
+          brokerName="WOWX"
+          // Force Mainnet exclusively
+          networkId="mainnet"
+		  // Configure supported wallet chains (e.g., BSC and Ethereum)
+		  // and set BSC as the default initial chain/wallet adapter context if supported by your SDK version
+		  chains={["bsc", "ethereum"]} 
+		  defaultChain="bsc"
+          theme={{
+            primaryColor: "#E2FE30",
+            mode: "dark",
+          }}
+          appIcons={{
+            main: {
+              component: (
+                <img
+                  className="orderly-app-logo"
+                  alt="WowX"
+                  src={WOWX_THEME.logoUrl}
+                  style={{ height: "42px", width: "auto", objectFit: "contain" }}
+                />
+              ),
+            },
+          }}
+          onRouteChange={onRouteChange}
+        >
+          <Outlet />
+        </OrderlyAppProvider>
+      </WalletConnectorProvider>
+    </OrderlyLocaleProvider>
   );
 };
